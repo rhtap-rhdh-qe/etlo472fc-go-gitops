@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: etlo472fc-go
+  janus-idp.io/tekton: etlo472fc-go
+  backstage.io/kubernetes-id: etlo472fc-go
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: etlo472fc-go
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
